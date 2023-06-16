@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Specify the path to your folder containing the Excel file
+folder_path="~/Desktop/Cambridge/Spondylodiscitis/Public Repository"
+
+# Initialize a new Git repository
+git init "$folder_path"
+
+# Change directory to the folder
+cd "$folder_path" || exit
+
+# Add all files and subfolders to the repository
+git add .
+
+# Commit the changes with a commit message
+commit_message="Initial commit"
+git commit -m "$commit_message"
+
+# Link the local repository to the remote repository
+remote_repository_url="https://github.com/your-username/your-repo.git"
+git remote add origin "$remote_repository_url"
+
+# Push the local repository to the remote repository
+git push -u origin master
+
